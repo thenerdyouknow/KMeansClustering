@@ -1,18 +1,15 @@
-import random
-import string
+from sklearn.datasets import make_blobs
 import csv
 
-final_transactions = []
-for i in range(10000):
-	current_transaction = []
-	number_of_items = 2
-	for j in range(number_of_items):
-		random_item = random.uniform(-21000,21000)
-		if random_item not in current_transaction:
-			current_transaction.append(random_item)
-	final_transactions.append(current_transaction)
+#create cluster blobs that are 2 dimensional, have 4 clusters, and are 10,000 points.
+#the datapoints are equally distributed between the 4 clusters
+X, y = make_blobs(n_samples=10000, centers=4, n_features=2)
 
 with open('dummy_dataset.csv','w') as open_file:
 	csv_writer = csv.writer(open_file)
-	for each_transaction in final_transactions:
-		csv_writer.writerow(each_transaction)
+	csv_writer.writerow(['X','Y','Cluster'])
+	for i in range(len(X)):
+		#append the cluster label to the coordinate and then write it to the csv
+		new_Xi = list(X[i])
+		new_Xi.append(y[i])
+		csv_writer.writerow(new_Xi)
