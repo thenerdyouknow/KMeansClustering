@@ -7,8 +7,9 @@
 
 The program will cluster and then display the clusters as well. 
 
-Note : The plotting of the clusters assumes that you're working with 2 dimensional data, if you'd like to work with more dimensions I would recomment using PCA
-to reduce the dimensions and then plotting it.
+Note : The plotting of the clusters assumes that you're working with 2 dimensional data, if you'd like to work with more dimensions I would recomment using PCA to reduce the dimensions and then plotting it.
+
+Note 2 : The distance is calculated using the Euclidean distance formula, that function can be replaced with one that calculated Manhattan distance as well. Will try to add that functionality in the future.
 
 ## Notes:
 1. Datasets can be generated using dataset_generator.py
