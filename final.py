@@ -1,12 +1,17 @@
+# Team Name : Yeet!
+# Team Member 1 : Venkatesh Thapan
+# Team Member 2 : Ishita Singhal
+# Team Member 3 : Asiket Singh Dhillon
+
 import pandas as pd
 import matplotlib.pyplot as plt
 import math
 import numpy
 import random
 
-random.seed(100)
+random.seed(250)
 
-FILE_PATH = "dummy_dataset.csv"
+FILE_PATH = "4_cluster_data.csv"
 
 class K_Means_Clustering:
 	
