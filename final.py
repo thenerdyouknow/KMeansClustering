@@ -4,7 +4,7 @@ import math
 import numpy
 import random
 
-random.seed(536)
+random.seed(100)
 
 FILE_PATH = "dummy_dataset.csv"
 
