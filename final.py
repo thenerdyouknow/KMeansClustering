@@ -124,7 +124,11 @@ def plot_clusters(class_instance):
 
 	plt.show()
 
-df = pd.read_csv(FILE_PATH)
-km = K_Means_Clustering(4)
-km.fit(df[['X','Y']])
-plot_clusters(km)
+def main():
+	df = pd.read_csv(FILE_PATH)
+	km = K_Means_Clustering(4)
+	km.fit(df[['X','Y']])
+	plot_clusters(km)
+
+if __name__ == '__main__':
+	main()
